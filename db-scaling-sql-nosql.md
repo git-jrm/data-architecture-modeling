@@ -376,7 +376,7 @@ Este diseño permite manejar grandes volúmenes de pedidos distribuyendo la carg
 **Desventajas:**
 - **Costo impredecible:** solo se puede estimar; varía con el uso y el tráfico.
 - **Límites por ítem:** 400 KB máximo por registro.
-- **Límite de CapacityUnits:** 40.000 para lectura y escritura (ampliable bajo solicitud).
+- **Cuotas de capacidad:** En Provisioned la cuota predeterminada es 40.000 RCU y 40.000 WCU por tabla (el doble por cuenta y región), en On-Demand la cuota predeterminada es 40.000 RRU y 40.000 WRU por tabla. Ampliable mediante AWS Service Quotas.
 
 ## Estrategia de optimización y escalabilidad
 
