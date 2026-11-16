@@ -1,3 +1,5 @@
+[Volver atrás](https://github.com/git-jrm/database-architecture)
+
 # 🏗️ Arquitectura de datos y Modelado dimensional
 
 Este repositorio documenta dos casos de arquitectura y modelado de datos aplicados a escenarios inspirados en empresas reales: diseño de una arquitectura de datos por capas (Data Lake, Data Warehouse, gobernanza) y modelado dimensional para analítica de negocio (esquema estrella, enfoque Kimball).
