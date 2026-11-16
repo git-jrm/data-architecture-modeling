@@ -273,6 +273,7 @@ $ aws dynamodb put-item \
     "ClienteID": {"S": "C1985"},
     "PedidoID": {"S": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d"},
     "Fecha": {"S": "2025-08-10"},
+    "FechaPedido": {"S": "2025-08-10T14:32:45.123456789Z#9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d"},
     "ProductoID": {"N": "42"},
     "Cantidad": {"N": "2"},
     "ValorUnidad": {"N": "699000"},
@@ -284,8 +285,10 @@ $ aws dynamodb put-item \
 ```bash
 $ aws dynamodb query \
   --table-name Pedidos \
+  --index-name PedidosPorCliente \
   --key-condition-expression "ClienteID = :id" \
-  --expression-attribute-values '{":id":{"S": "C1985"}}'
+  --expression-attribute-values '{":id":{"S": "C1985"}}' \
+  --scan-index-forward
 ```
 
 Salida:
