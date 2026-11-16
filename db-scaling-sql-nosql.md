@@ -172,9 +172,9 @@ Conservar la BD relacional SQL Server para datos estructurados críticos, e inte
 Para la BD no relacional (NoSQL) se propone **Cassandra** por estas características clave:
 
 - **Sin punto único de fallo:** arquitectura distribuida que garantiza disponibilidad continua ante fallos.
-- - **Concurrencia muy alta:** arquitectura distribuida que permite procesar grandes volúmenes de operaciones concurrentes, distribuyendo las solicitudes entre múltiples nodos.
+- **Concurrencia muy alta:** arquitectura distribuida que permite procesar grandes volúmenes de operaciones concurrentes, distribuyendo las solicitudes entre múltiples nodos.
 - **Escrituras siempre disponibles:** ideal para logs de streaming y datos de sesión en tiempo real.
-- **Tolerancia a particiones:** mantiene operación normal aunque se pierda conectividad entre regiones.
+- **Tolerancia a particiones:** permite mantener determinadas operaciones ante fallos de comunicación entre nodos o centros de datos, dependiendo del replication factor y los consistency levels configurados.
 
 ## Estrategia de migración
 
@@ -185,7 +185,7 @@ Para la BD no relacional (NoSQL) se propone **Cassandra** por estas característ
 ## Beneficios esperados
 
 - Eliminación completa del cuello de botella de 32K conexiones.
-- Disponibilidad 24/7 sin interrupciones por mantenimiento o fallos.
+- Alta disponibilidad y tolerancia a fallos mediante replicación distribuida y configuración de múltiples centros de datos.
 - Escalabilidad lineal preparada para crecimiento exponencial de usuarios.
 - Latencia consistente independiente del volumen de tráfico concurrente.
 
