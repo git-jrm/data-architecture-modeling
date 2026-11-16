@@ -184,11 +184,11 @@ Se evidenció cómo las librerías adecuadas en Python optimizan tanto el desarr
 
 [Volver arriba](#obtención-y-preparación-de-datos)
 
-## Análisis de caso - Obtención de datos desde archivos
+## Análisis de caso - ESPN
 
 El objetivo de esta actividad es realizar una simulación de un escenario real en el que debemos adoptar el rol de analista de datos en una empresa de consultoría que trabaja con grandes volúmenes de datos provenientes de diferentes fuentes. El objetivo específico es integrar datos desde múltiples fuentes para luego analizarlos, garantizando eficiencia y eficacia.
 
-Como analista de datos consultor en McKinsey, nuestro principal cliente deportivo ESPN, nos solicita para su área de marketing analizar los datos de los 3 deportes que cuentan con mayor auspicio para la próxima temporada: tenis, fútbol y básquetbol. 
+Como Ingeniero Informático consultor especializado en análisis de datos, **McKinsey** nos solicita para su principal cliente deportivo **ESPN** analizar los datos de los 3 deportes que cuentan con mayor auspicio para la próxima temporada: Tenis, Fútbol y Básquetbol. 
 
 Se requiere procesar la data de los mejores jugadores profesionales de la actualidad. A continuación el código y explicación detallada:
 
@@ -198,21 +198,17 @@ Archivo M3-L3-etl.py :
 ```Python
 import pandas as pd
 
-
 print(f"\n 1. Carga de datos desde distintos archivos: ")
-
 
 # 1.a: Importa un archivo CSV en un DataFrame de Pandas: Top jugadores tenis
 df_tenis_csv = pd.read_csv("M3/M3-L3-top_tenis.csv")
 print(f"\n • {len(df_tenis_csv)} jugadores de tenis. Columnas disponibles: {list(df_tenis_csv.columns)}")
 print(df_tenis_csv.head(2))
 
-
 # 1.b: Carga un archivo Excel en otro DataFrame: Top jugadores fútbol
 df_futbol_excel = pd.read_excel("M3/M3-L3-top_futbol.xlsx")
 print(f"\n • {len(df_futbol_excel)} jugadores de fútbol. Columnas disponibles: {list(df_futbol_excel.columns)}")
 print(df_futbol_excel.head(2))
-
 
 # 1.c: Extrae información de una tabla web utilizando read_html: Top jugadores NBA
 df_nba_raw = pd.read_html("https://www.basketball-reference.com/leagues/NBA_2025_per_game.html")[0]
