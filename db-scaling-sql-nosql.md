@@ -62,7 +62,7 @@ Para este análisis se incluyen los siguientes elementos:
 |---|---|---|
 | Modelo de datos | Tablas con esquema fijo | Documentos, clave-valor, columnas o grafos |
 | Escalabilidad | Principalmente vertical; horizontal mediante réplicas, sharding y arquitecturas distribuidas | Horizontal nativa en motores distribuidos |
-| Consistencia | Fuerte (ACID) | Eventual (BASE), configurable según motor |
+| Consistencia | Generalmente ACID, según motor y configuración | Variable según motor: eventual, fuerte o configurable |
 | Rendimiento en escrituras masivas | Limitado por hardware del nodo | Alto, distribuido entre nodos |
 | Esquema | Rígido, requiere migraciones | Flexible, sin esquema fijo |
 | Costos | Infraestructura propia (CapEx) | Modelo gestionado, pago por uso (OpEx) |
@@ -91,7 +91,7 @@ Mantener la BD relacional (SQL) actual, MySQL, como la principal, e implementar 
 
 Para la BD no relacional (NoSQL) se recomienda **DynamoDB** por estas ventajas:
 
-- **Escalado horizontal:** permite escalado casi ilimitado, soporta millones de registros/hora.
+- **Escalado horizontal:** un buen diseño ofrece una escalabilidad prácticamente ilimitada, soporta millones de registros por hora.
 - **Cobro por uso:** ventaja de modelo de negocio dado que la App tiene peaks de uso.
 - **Reduce OpEx:** reduce drásticamente la carga operativa y el mantenimiento requerido.
 - **Elimina CapEx:** no requiere inversión inicial en infraestructura.
