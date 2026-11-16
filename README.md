@@ -6,8 +6,8 @@ Casos de estudio de escalabilidad, arquitectura de datos y modelado dimensional 
 
 | Documento | Casos | Temas principales |
 | :--- | :--- | :--- |
-| **Bases de datos para alta escalabilidad** | Fracttal, MOBI, PCFactory | SQL vs NoSQL, soluciones híbridas, DynamoDB, Cassandra, Well-Architected Framework |
-| **Arquitectura de datos y modelado dimensional** | InfoHealth, Mercato | Data Lake por capas, Data Warehouse, gobernanza (DAMA-DMBOK), calidad de datos, modelo estrella (Kimball) |
+| **[Bases de datos para alta escalabilidad](https://github.com/git-jrm/database-architecture/blob/main/db-scaling-sql-nosql.md)** | Fracttal, MOBI, PCFactory | SQL vs NoSQL, soluciones híbridas, DynamoDB, Cassandra, Well-Architected Framework |
+| **[Arquitectura de datos y modelado dimensional](https://github.com/git-jrm/database-architecture/blob/main/data-architecture-modeling.md)** | InfoHealth, Mercato | Data Lake por capas, Data Warehouse, gobernanza (DAMA-DMBOK), calidad de datos, modelo estrella (Kimball) |
 
 ## Bases de datos para alta escalabilidad
 
