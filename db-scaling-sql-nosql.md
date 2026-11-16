@@ -91,7 +91,7 @@ Mantener la BD relacional (SQL) actual, MySQL, como la principal, e implementar 
 
 Para la BD no relacional (NoSQL) se recomienda **DynamoDB** por estas ventajas:
 
-- **Escalado horizontal:** un buen diseño ofrece una escalabilidad prácticamente ilimitada, soporta millones de registros por hora.
+- **Escalado horizontal:** un buen diseño permite escalar horizontalmente a gran escala y procesar millones de registros por hora.
 - **Cobro por uso:** ventaja de modelo de negocio dado que la App tiene peaks de uso.
 - **Reduce OpEx:** reduce drásticamente la carga operativa y el mantenimiento requerido.
 - **Elimina CapEx:** no requiere inversión inicial en infraestructura.
