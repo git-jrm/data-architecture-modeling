@@ -270,7 +270,7 @@ La tecnología actúa como habilitador de la transformación organizacional haci
 
 El éxito depende de integrar estas herramientas tecnológicas con procesos organizacionales efectivos, donde la gobernanza facilita la adopción gradual y el impacto medible en el desempeño empresarial.
 
-[Volver al índice](#índice)[Volver](#m5)
+[Volver al índice](#índice)
 
 
 
