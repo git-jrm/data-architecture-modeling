@@ -371,7 +371,7 @@ Este diseño permite manejar grandes volúmenes de pedidos distribuyendo la carg
 **Ventajas:**
 - **Escalabilidad automática:** crece sin reconfiguración manual.
 - **Baja latencia:** respuestas rápidas en milisegundos.
-- **Alta disponibilidad:** datos replicados en regiones.
+- **Alta disponibilidad:** replicación automática entre múltiples zonas de disponibilidad dentro de una región AWS. La replicación entre regiones requiere configurar Global Tables.
 
 **Desventajas:**
 - **Costo impredecible:** solo se puede estimar; varía con el uso y el tráfico.
