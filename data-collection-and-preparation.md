@@ -184,8 +184,7 @@ Este trabajo nos permitió aplicar el uso de la librería NumPy para resolver un
 
 Se evidenció cómo las librerías adecuadas en Python optimizan tanto el desarrollo como la ejecución e interpretación de los datos. Además el escenario propuesto fue de gran ayuda para comprender situaciones reales del día a día de un analista de datos
 
-[Volver arriba](#obtención-y-preparación-de-datos)
-
+[Volver al índice](#índice)
 ## Análisis de caso - ESPN
 
 El objetivo de esta actividad es realizar una simulación de un escenario real en el que debemos adoptar el rol de analista de datos en una empresa de consultoría que trabaja con grandes volúmenes de datos provenientes de diferentes fuentes. El objetivo específico es integrar datos desde múltiples fuentes para luego analizarlos, garantizando eficiencia y eficacia.
@@ -423,8 +422,7 @@ Además se demostró cómo el DataFrame de Pandas facilita la manipulación y co
 
 La actividad facilitó el desarrollo de habilidades clave en la recolección y procesamiento de datos heterogéneos mediante librerías de Python, abordando un caso realista que nos permite anticipar escenarios y desafíos comunes para un analista de datos.
 
-[Volver arriba](#obtención-y-preparación-de-datos)
-
+[Volver al índice](#índice)
 ### ANEXO 1: Código para generar archivos CSV y Excel
 
 Archivo M3-L3-genera.py :
@@ -531,8 +529,7 @@ if tennis_players:
    df_tenis.to_csv("M3/M3-L3-top_tenis.csv", index=False)
 ```
 
-[Volver arriba](#obtención-y-preparación-de-datos)
-
+[Volver al índice](#índice)
 ### ANEXO 2: Fragmento de archivos generados
 
 Archivo M3-L3-top_tenis.csv :
@@ -589,8 +586,7 @@ Rank	Jugador	Edad	Market Value	Deporte
 45	Nicolò Barella	28	€75.00m	Fútbol
 ```
 
-[Volver arriba](#obtención-y-preparación-de-datos)
-
+[Volver al índice](#índice)
 ## Análisis de caso - Data wrangling
 
 El objetivo de esta actividad es realizar una simulación de un escenario real en el que debemos adoptar el rol de científico de datos encargado de optimizar la manipulación de datos. Con el objetivo de desarrollar una solución usando Pandas, garantizando eficiencia y eficacia.
@@ -847,8 +843,7 @@ Este trabajo nos permitió aprender técnicas y desarrollar habilidades de Data 
 
 Además, se evidenció la relevancia del Data Wrangling como proceso clave en la preparación de datos de calidad, el cual debe estar respaldado por un adecuado y diligente Gobierno de Datos, garantizando la integridad, seguridad y trazabilidad de la información para apoyar decisiones confiables y efectivas.
 
-[Volver arriba](#obtención-y-preparación-de-datos)
-
+[Volver al índice](#índice)
 ### ANEXO 1: Código para generar el CSV
 
 Archivo M3-L5-genera.py :
@@ -905,8 +900,7 @@ df.to_csv('M3/M3-L5-data.csv', index=False)
 print("CSV 'M3/M3-L5-data.csv' generado con éxito.")
 ```
 
-[Volver arriba](#obtención-y-preparación-de-datos)
-
+[Volver al índice](#índice)
 ### ANEXO 2: Fragmento del CSV generado
 
 Archivo M3-L5-data.csv :
@@ -971,8 +965,7 @@ timestamp,id_usuario,tipo,monto,fuente_info,forma_pago
 20250713214053,262,egreso,801.0,email,efectivo
 ```
 
-[Volver arriba](#obtención-y-preparación-de-datos)
-
+[Volver al índice](#índice)
 ## Evolución del Aprendizaje
 
 Este módulo nos llevó desde una visión inicial del ciclo de vida de los datos hasta la aplicación concreta de técnicas de Data Wrangling con Pandas y NumPy. El recorrido fue:
@@ -984,12 +977,11 @@ Este módulo nos llevó desde una visión inicial del ciclo de vida de los datos
 
 A lo largo del módulo, adquirimos un enfoque más técnico y riguroso sobre la importancia de preparar datos de calidad para análisis efectivos. Cada trabajo fue una oportunidad de aplicar estos conceptos con datasets reales y con sentido práctico.
 
-[Volver arriba](#obtención-y-preparación-de-datos)
-
+[Volver al índice](#índice)
 ## Conclusiones
 
 El **Módulo 3** nos permitió profundizar el ecosistema de Python para la manipulación de grandes volúmenes de datos mediante la aplicación de técnicas y herramientas poderosas que nos facilitan la labor. También gracias a las actividades prácticas aprendimos a usar librerías clave como NumPy, Pandas y BeautifulSoup para la extracción, limpieza y transformación de datos. La práctica de técnicas ETL y Data Wrangling en escenarios realistas nos brindó una comprensión profunda de cómo abordar los desafíos cotidianos en la manipulación de datos.
 
 Además pudimos constrastar los roles de Analista de datos y Cientifico de datos, sumados al rol de Ingeniero de datos nos da los 3 principales roles para implementar la estrategia de datos de una organización, impulsada por una adecuada Gobernanza de Datos.
 
-[Volver arriba](#obtención-y-preparación-de-datos)
+[Volver al índice](#índice)
