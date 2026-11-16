@@ -378,6 +378,9 @@ Este diseño permite manejar grandes volúmenes de pedidos distribuyendo la carg
 - **Límites por ítem:** 400 KB máximo por registro.
 - **Cuotas de capacidad:** En Provisioned la cuota predeterminada es 40.000 RCU y 40.000 WCU por tabla (el doble por cuenta y región), en On-Demand la cuota predeterminada es 40.000 RRU y 40.000 WRU por tabla. Ampliable mediante AWS Service Quotas.
 
+> RCU/WCU corresponden a capacidad aprovisionada.
+> RRU/WRU corresponden a unidades de solicitud bajo demanda.
+
 ## Estrategia de optimización y escalabilidad
 
 **¿Cuál estrategia de autoescalado de capacidad en DynamoDB es mejor?**
