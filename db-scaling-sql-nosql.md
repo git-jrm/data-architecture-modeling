@@ -61,7 +61,7 @@ Para este análisis se incluyen los siguientes elementos:
 | Criterio | SQL (Relacional) | NoSQL (No relacional) |
 |---|---|---|
 | Modelo de datos | Tablas con esquema fijo | Documentos, clave-valor, columnas o grafos |
-| Escalabilidad | Vertical (más recursos por servidor) | Horizontal (más nodos) |
+| Escalabilidad | Principalmente vertical; horizontal mediante réplicas, sharding y arquitecturas distribuidas | Horizontal nativa en motores distribuidos |
 | Consistencia | Fuerte (ACID) | Eventual (BASE), configurable según motor |
 | Rendimiento en escrituras masivas | Limitado por hardware del nodo | Alto, distribuido entre nodos |
 | Esquema | Rígido, requiere migraciones | Flexible, sin esquema fijo |
