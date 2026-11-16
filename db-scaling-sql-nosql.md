@@ -382,7 +382,7 @@ Este diseño permite manejar grandes volúmenes de pedidos distribuyendo la carg
 
 **¿Cuál estrategia de autoescalado de capacidad en DynamoDB es mejor?**
 
-Se recomienda **Auto Scaling on-demand (On-Demand Capacity Mode)**, ya que ajusta automáticamente la capacidad de lectura y escritura según la demanda real, eliminando la necesidad de estimaciones previas y reduciendo riesgos de throttling en picos de tráfico inesperados.
+Se recomienda **On-Demand Capacity Mode**, ya que DynamoDB administra automáticamente la capacidad de lectura y escritura según la demanda, sin necesidad de configurar unidades de capacidad aprovisionadas ni políticas de autoescalado.
 
 **¿Con qué servicios se integra DynamoDB?**
 
