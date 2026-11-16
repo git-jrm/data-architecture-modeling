@@ -2,7 +2,7 @@
 
 Este repositorio documenta dos casos de arquitectura y modelado de datos aplicados a escenarios inspirados en empresas reales: diseño de una arquitectura de datos por capas (Data Lake, Data Warehouse, gobernanza) y modelado dimensional para analítica de negocio (esquema estrella, enfoque Kimball).
 
-Índice
+## Índice
 - [I. 🏥 InfoHealth: Arquitectura de Datos para Recuperar la Confianza](#i--infohealth-arquitectura-de-datos-para-recuperar-la-confianza)
   - [1. Diagnóstico y Arquitectura Propuesta](#1-diagnóstico-y-arquitectura-propuesta)
   - [2. Almacenamiento y Gestión de Datos](#2-almacenamiento-y-gestión-de-datos)
