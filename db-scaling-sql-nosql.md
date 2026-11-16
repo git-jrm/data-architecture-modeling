@@ -151,7 +151,7 @@ Para este análisis se incluyen: comparación entre bases de datos relacionales 
 
 ### Evaluar aspectos clave
 
-Desde la perspectiva del teorema CAP, se establece optar por un enfoque que priorice la disponibilidad de lecturas por sobre la consistencia.
+Desde la perspectiva del teorema CAP, se prioriza la disponibilidad durante situaciones de partición de red, aceptando consistencia eventual en aquellos datos donde el negocio lo permita. Cassandra permite ajustar los niveles de consistencia según los requerimientos de cada operación
 
 Es fundamental considerar:
 
