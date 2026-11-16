@@ -9,7 +9,7 @@ Este repositorio documenta dos casos de arquitectura y modelado de datos aplicad
   - [3. Calidad de los Datos](#3-calidad-de-los-datos)
 - [II. 🛒 Mercato: Del OLTP al Modelo Dimensional para BI](#ii--mercato-del-oltp-al-modelo-dimensional-para-bi)
 - [Análisis Transversal](#análisis-transversal)
-- [Conclusión General](#conclusión-general)
+- [Conclusión](#conclusión)
 
 ---
 
@@ -264,7 +264,7 @@ Se complementa con Slowly Changing Dimensions tipo 4, usando una tabla separada 
 
 [Volver al índice](#índice)
 
-## Conclusión General
+## Conclusión
 
 La tecnología actúa como habilitador de la transformación organizacional hacia decisiones basadas en datos. Los casos analizados muestran que las arquitecturas implementadas (Data Lake y Data Warehouse) resuelven problemas técnicos inmediatos mientras construyen capacidades analíticas sostenibles.
 
