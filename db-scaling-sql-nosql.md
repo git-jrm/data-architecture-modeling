@@ -105,7 +105,7 @@ Para la BD no relacional (NoSQL) se recomienda **DynamoDB** por estas ventajas:
 ## Beneficios esperados
 
 - Reducción de la latencia y eliminación de cuellos de botella.
-- Escalabilidad prácticamente ilimitada.
+- Escalabilidad horizontal a gran escala.
 - Menor riesgo de interrupciones ante picos de carga.
 - Infraestructura lista para el crecimiento proyectado y nuevos casos de uso.
 - Habilita análisis con herramientas de AWS como Amazon QuickSight (dashboards ejecutivos) y Amazon Redshift (data warehousing de registros históricos).
@@ -184,7 +184,7 @@ Para la BD no relacional (NoSQL) se propone **Cassandra** por estas característ
 
 ## Beneficios esperados
 
-- Eliminación completa del cuello de botella de 32K conexiones.
+- Resuelve el cuello de botella mediante una arquitectura distribuida.
 - Alta disponibilidad y tolerancia a fallos mediante replicación distribuida y configuración de múltiples centros de datos.
 - Escalabilidad lineal preparada para crecimiento exponencial de usuarios.
 - Latencia consistente independiente del volumen de tráfico concurrente.
@@ -387,6 +387,8 @@ Este diseño permite manejar grandes volúmenes de pedidos distribuyendo la carg
 **¿Cuál estrategia de autoescalado de capacidad en DynamoDB es mejor?**
 
 Se recomienda **On-Demand Capacity Mode**, ya que DynamoDB administra automáticamente la capacidad de lectura y escritura según la demanda, sin necesidad de configurar unidades de capacidad aprovisionadas ni políticas de autoescalado.
+
+Como alternativa, si el volumen de operaciones presenta un comportamiento estable y predecible, se puede evaluar Provisioned Capacity Mode con Application Auto Scaling. Este enfoque permite optimizar costos cuando la utilización promedio de la capacidad aprovisionada supera aproximadamente +30%, tomando como referencia los precios de AWS en US East (N. Virginia) para operaciones estándar. (El punto de equilibrio varía según la región, el tamaño de los ítems y el patrón de acceso).
 
 **¿Con qué servicios se integra DynamoDB?**
 
