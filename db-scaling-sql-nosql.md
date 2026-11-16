@@ -294,20 +294,21 @@ $ aws dynamodb query \
 Salida:
 ```json
 {
-    "Items": [
-        {
-            "ClienteID": {"S": "C1985"},
-            "PedidoID": {"S": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d"},
-            "Fecha": {"S": "2025-08-10"},
-            "ProductoID": {"N": "42"},
-            "Cantidad": {"N": "2"},
-            "ValorUnidad": {"N": "699000"},
-            "TiendaID": {"S": "CL137"}
-        }
-    ],
-    "Count": 1,
-    "ScannedCount": 1,
-    "ConsumedCapacity": null
+  "Items": [
+    {
+      "ClienteID": {"S": "C1985"},
+      "PedidoID": {"S": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d"},
+      "Fecha": {"S": "2025-08-10"},
+      "FechaPedido": {"S": "2025-08-10T14:32:45.123456789Z#9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d"},
+      "ProductoID": {"N": "42"},
+      "Cantidad": {"N": "2"},
+      "ValorUnidad": {"N": "699000"},
+      "TiendaID": {"S": "CL137"}
+    }
+  ],
+  "Count": 1,
+  "ScannedCount": 1,
+  "ConsumedCapacity": null
 }
 ```
 
@@ -329,15 +330,16 @@ $ aws dynamodb update-item \
 Salida:
 ```json
 {
-    "Attributes": {
-        "ClienteID": {"S": "C1985"},
-        "PedidoID": {"S": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d"},
-        "Fecha": {"S": "2025-08-10"},
-        "ProductoID": {"N": "42"},
-        "Cantidad": {"N": "2"},
-        "ValorUnidad": {"N": "699000"},
-        "TiendaID": {"S": "CL137"}
-    }
+  "Attributes": {
+    "ClienteID": {"S": "C1985"},
+    "PedidoID": {"S": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d"},
+    "Fecha": {"S": "2025-08-10"},
+    "FechaPedido": {"S": "2025-08-10T14:32:45.123456789Z#9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d"},
+    "ProductoID": {"N": "42"},
+    "Cantidad": {"N": "2"},
+    "ValorUnidad": {"N": "699000"},
+    "TiendaID": {"S": "CL137"}
+  }
 }
 ```
 
@@ -355,16 +357,17 @@ $ aws dynamodb delete-item \
 Salida:
 ```json
 {
-    "Attributes": {
-        "ClienteID": {"S": "C1985"},
-        "PedidoID": {"S": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d"},
-        "Fecha": {"S": "2025-08-10"},
-        "ProductoID": {"N": "42"},
-        "Cantidad": {"N": "2"},
-        "ValorUnidad": {"N": "699000"},
-        "TiendaID": {"S": "CL137"}
-    }
-}
+  "Attributes": {
+    "ClienteID": {"S": "C1985"},
+    "PedidoID": {"S": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d"},
+    "Fecha": {"S": "2025-08-10"},
+    "FechaPedido": {"S": "2025-08-10T14:32:45.123456789Z#9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d"},
+    "ProductoID": {"N": "42"},
+    "Cantidad": {"N": "2"},
+    "ValorUnidad": {"N": "699000"},
+    "TiendaID": {"S": "CL137"}
+  }
+}}
 ```
 
 Este diseño permite manejar grandes volúmenes de pedidos distribuyendo la carga de lectura y escritura gracias a la clave compuesta, de esta manera:
