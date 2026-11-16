@@ -1,3 +1,5 @@
+[Volver atrás](https://github.com/git-jrm/database-architecture)
+
 # 🔀 Bases de Datos para alta escalabilidad
 
 Este repositorio documenta tres análisis de arquitectura de bases de datos SQL vs NoSQL aplicados a casos inspirados en empresas reales, con foco en escalabilidad y disponibilidad. Trabajando con Amazon DynamoDB, Cassandra y AWS Well-Architected Framework.
