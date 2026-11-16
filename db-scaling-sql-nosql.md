@@ -140,7 +140,14 @@ Por lo anterior, se precisa elegir la solución que mejor cumpla con los criteri
 
 Para este análisis se incluyen: comparación entre bases de datos relacionales (SQL) y no relacionales (NoSQL), puntos débiles de la solución actual, recomendaciones y justificación.
 
-> **[Insertar tabla comparativa de tecnologías NoSQL]**
+| Criterio | MongoDB | DynamoDB | Cassandra | Neo4j |
+| :--- | :--- | :--- | :--- | :--- |
+| Modelo de datos | Documentos | Clave-valor y documentos | Columnas anchas | Grafos |
+| Escalabilidad | Horizontal (sharding) | Horizontal automática | Horizontal lineal | Principalmente réplicas de lectura |
+| Consistencia (CAP) | Fuerte por defecto | Eventual; lectura fuerte opcional | Eventual y ajustable por consulta | ACID |
+| Operación | Autogestionado o Atlas | Totalmente gestionado, pago por uso | Autogestionado o servicios gestionados | Autogestionado o Aura |
+| Comunidad | Grande | Grande | Mediana | Pequeña |
+| Ajuste al caso MOBI | Medio | Alto, con costo variable a gran escala | Alto: escrituras masivas y disponibilidad 24/7 | Bajo: pensado para relaciones, no para concurrencia de escritura |
 
 ### Evaluar aspectos clave
 
@@ -222,9 +229,12 @@ A continuación, la estructura de creación de la tabla y un CRUD completo a mod
 ```bash
 $ aws dynamodb create-table \
   --table-name Pedidos \
+  --billing-mode PAY_PER_REQUEST \
   --attribute-definitions \
     AttributeName=ClienteID,AttributeType=S \
     AttributeName=PedidoID,AttributeType=S \
+    AttributeName=Fecha,AttributeType=S \
+    AttributeName=TiendaID,AttributeType=S \
   --key-schema \
     AttributeName=ClienteID,KeyType=HASH \
     AttributeName=PedidoID,KeyType=RANGE \
@@ -250,13 +260,9 @@ $ aws dynamodb create-table \
       "Projection": {
         "ProjectionType": "INCLUDE",
         "NonKeyAttributes": ["Cantidad", "ValorUnidad"]
-      },
-      "ProvisionedThroughput": {
-        "ReadCapacityUnits": 10
       }
     }
-  ]' \
-  --provisioned-throughput WriteCapacityUnits=10000
+  ]'
 ```
 
 **Crea Pedido:**
@@ -270,7 +276,7 @@ $ aws dynamodb put-item \
     "ProductoID": {"N": "42"},
     "Cantidad": {"N": "2"},
     "ValorUnidad": {"N": "699000"},
-    "TiendaID": {"N": "137"}
+    "TiendaID": {"S": "CL137"}
   }'
 ```
 
@@ -293,7 +299,7 @@ Salida:
             "ProductoID": {"N": "42"},
             "Cantidad": {"N": "2"},
             "ValorUnidad": {"N": "699000"},
-            "TiendaID": {"N": "137"}
+            "TiendaID": {"S": "CL137"}
         }
     ],
     "Count": 1,
@@ -358,7 +364,7 @@ Salida:
 }
 ```
 
-Este diseño permite manejar grandes volúmenes de pedidos distribuyendo uniformemente la carga de lectura y escritura gracias a la clave compuesta. Los LSI facilitan ordenar pedidos por fecha dentro de la misma tienda, mientras que los GSI habilitan consultas por cliente y por estado sin afectar el rendimiento de la tabla principal.
+Este diseño permite manejar grandes volúmenes de pedidos distribuyendo la carga de lectura y escritura gracias a la clave compuesta. El LSI `PedidosPorCliente` permite consultar los pedidos de un cliente ordenados por fecha, y el GSI `PedidosPorTienda` permite consultar los pedidos de una tienda por fecha en todos los clientes, sin recorrer toda la tabla.
 
 ## Ventajas y desventajas de migración a DynamoDB
 
