@@ -1,6 +1,6 @@
 # Obtención y preparación de datos
 
-Ejercicios y `Scripts` de soluciones desarrollados en clases, los conocimientos y experiencias aprendidas en el transcurso del bootcamp.
+Aquí encontrarás: Ejercicios y `Scripts` de soluciones desarrollados en clases, los conocimientos y experiencias aprendidas en el transcurso del bootcamp.
 
 También encontrarás por cada ejercicio una explicación detallada, instruccines para ejecutar, comentarios en las instrucciones y evidencia de pruebas.
 
