@@ -990,4 +990,4 @@ El **Módulo 3** nos permitió profundizar el ecosistema de Python para la manip
 
 Además pudimos constrastar los roles de Analista de datos y Cientifico de datos, sumados al rol de Ingeniero de datos nos da los 3 principales roles para implementar la estrategia de datos de una organización, impulsada por una adecuada Gobernanza de Datos.
 
-[Volver](#m3-obtenci%C3%B3n-y-preparaci%C3%B3n-de-datos)
+[Volver arriba](#obtención-y-preparación-de-datos)
