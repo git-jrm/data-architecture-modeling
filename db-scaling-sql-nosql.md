@@ -229,12 +229,12 @@ A continuación, la estructura de creación de la tabla y un CRUD completo a mod
 ```bash
 $ aws dynamodb create-table \
   --table-name Pedidos \
-  --billing-mode PAY_PER_REQUEST \
   --attribute-definitions \
     AttributeName=ClienteID,AttributeType=S \
     AttributeName=PedidoID,AttributeType=S \
-    AttributeName=Fecha,AttributeType=S \
+    AttributeName=FechaPedido,AttributeType=S \
     AttributeName=TiendaID,AttributeType=S \
+    AttributeName=Fecha,AttributeType=S \
   --key-schema \
     AttributeName=ClienteID,KeyType=HASH \
     AttributeName=PedidoID,KeyType=RANGE \
@@ -243,7 +243,7 @@ $ aws dynamodb create-table \
       "IndexName": "PedidosPorCliente",
       "KeySchema": [
         {"AttributeName": "ClienteID", "KeyType": "HASH"},
-        {"AttributeName": "Fecha", "KeyType": "RANGE"}
+        {"AttributeName": "FechaPedido", "KeyType": "RANGE"}
       ],
       "Projection": {
         "ProjectionType": "ALL"
@@ -258,11 +258,11 @@ $ aws dynamodb create-table \
         {"AttributeName": "Fecha", "KeyType": "RANGE"}
       ],
       "Projection": {
-        "ProjectionType": "INCLUDE",
-        "NonKeyAttributes": ["Cantidad", "ValorUnidad"]
+        "ProjectionType": "ALL"
       }
     }
-  ]'
+  ]' \
+  --billing-mode PAY_PER_REQUEST
 ```
 
 **Crea Pedido:**
@@ -364,7 +364,11 @@ Salida:
 }
 ```
 
-Este diseño permite manejar grandes volúmenes de pedidos distribuyendo la carga de lectura y escritura gracias a la clave compuesta. El LSI `PedidosPorCliente` permite consultar los pedidos de un cliente ordenados por fecha, y el GSI `PedidosPorTienda` permite consultar los pedidos de una tienda por fecha en todos los clientes, sin recorrer toda la tabla.
+Este diseño permite manejar grandes volúmenes de pedidos distribuyendo la carga de lectura y escritura gracias a la clave compuesta, de esta manera:
+
+- El LSI `PedidosPorCliente` permite consultar los pedidos de un cliente ordenados cronológicamente mediante `FechaPedido#PedidoID`, garantizando un desempate determinista. 
+
+- El GSI `PedidosPorTienda` permite consultar los pedidos de una tienda por fecha en todos los clientes, sin recorrer toda la tabla.
 
 ## Ventajas y desventajas de migración a DynamoDB
 
