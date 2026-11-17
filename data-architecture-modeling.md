@@ -1,4 +1,4 @@
-[Volver atrás](https://github.com/git-jrm/database-architecture)
+[⬅️Inicio](./README.md)
 
 # 🏗️ Arquitectura de datos y Modelado dimensional
 
