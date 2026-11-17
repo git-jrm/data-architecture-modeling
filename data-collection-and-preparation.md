@@ -1,4 +1,4 @@
-[Volver atrás](https://github.com/git-jrm/database-architecture)
+[⬅️Inicio](./README.md)
 
 # Obtención y preparación de datos
 
