@@ -1,4 +1,4 @@
-[⬅️Inicio](./README.md)
+[⬅️Inicio](https://github.com/git-jrm/database-architecture)
 
 # 🔀 Bases de Datos para alta escalabilidad
 
